@@ -9,12 +9,7 @@ public abstract class Shape//abstruct means implementation on the own way under 
 
     }
 }
-// public class Square : Shape
-// {
-//     public double Side { get; set; }
-//     public override double GetArea() => Side * Side;
-//     public override double GetPerimeter() => 4 * Side;
-//}
+
 public  class Rectangle : Shape
 
 {
@@ -28,6 +23,7 @@ public  class Rectangle : Shape
 
     public override double GetArea() => Length * Breadth;
     public override double GetPerimeter() => 2 * (Length * Breadth);
+    public override double GetDiagonalLength() => Math.Sqrt(Length*Length+Breadth*Breadth);
     public override void PrintDetails()
     {
         Console.WriteLine("printing details for shape...");
@@ -37,13 +33,18 @@ public  class Rectangle : Shape
 
     }
 }
+public interface IDiagonalComputable
+{
+    public double GetDiagonalLength();
+    
+}
 public class Square:Rectangle
 {
     public Square(double s) : base(s,s)
     {
 
     }
-    public double side { get; set; }
+    
 }
 public class Circle : Shape
 {
