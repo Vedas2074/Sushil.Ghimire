@@ -7,7 +7,7 @@ namespace FileDirectoryHandling
     {
         public void LearnFileReading()
         {
-           string fileContent= File.ReadAllText(@"C:\Users\sushi\OneDrive\Desktop\C# tuto\vedasLogo\test.txt");//@ is a verveting character
+           string fileContent= File.ReadAllText(@"C:\Users\sushi\OneDrive\Desktop\C# tuto\vedasLogo\test.txt");//@ is a verbatim character
            Console.WriteLine(fileContent);
         }
         public void LearnFileWriting()
@@ -36,7 +36,7 @@ namespace FileDirectoryHandling
         {
            string folderPath= @"C:\Users\sushi\OneDrive\Desktop\C# tuto\vedasLogo\Sushil.Ghimire";
         DirectoryInfo directory = new DirectoryInfo(folderPath);
-        var files = Directory.GetFiles();//return array
+        var files = Directory.GetFiles();//return array of length
         Console.WriteLine("File count:"+files.Length);
         }
 

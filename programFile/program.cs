@@ -1,9 +1,10 @@
 using System;
+using FileDirectoryHandling;
 // namespace AccessModifiersAndMethd
 using LearningClasses;
 class Program
 {
-    static void Main123()
+    static void Main()
     {
         // AccessModifiers accessModifiers =new AccessModifiers();
         // accessModifiers.DoSomething();
@@ -30,27 +31,33 @@ class Program
         // rectangle.Breadth=6.12;
         // var result =rectangle.GetArea();
         // Console.WriteLine("The Area Of rectangle is "+result);
-        Rectangle r= new Rectangle(23.7,6.32);
-        Rectangle r1= new Rectangle(24.7,61.32);
-        r.PrintDetails();
-        r1.PrintDetails();
-        r.GetDiagonalLength();
+        // Rectangle r= new Rectangle(23.7,6.32);
+        // Rectangle r1= new Rectangle(24.7,61.32);
+        // r.PrintDetails();
+        // r1.PrintDetails();
+        // r.GetDiagonalLength();
 
-        // {
-        //     //object initializer
-        //     // Length=23.7,
-        //     // Breadth =6.32
-        // };
-        var rArea = r.GetArea();
-        var r1Area = r1.GetArea();
+        // // {
+        // //     //object initializer
+        // //     // Length=23.7,
+        // //     // Breadth =6.32
+        // // };
+        // var rArea = r.GetArea();
+        // var r1Area = r1.GetArea();
 
-        Shape s= new Square(34.5);
-        // var sPerimeter=s.GetPerimeter();
-        s.PrintDetails();
+        // Shape s= new Square(34.5);
+        // // var sPerimeter=s.GetPerimeter();
+        // s.PrintDetails();
        
 
-        Shape c= new Circle(23.4);
-        // var cArea = c.GetArea();
+        // Shape c= new Circle(23.4);
+        // // var cArea = c.GetArea();
+        FileIO file= new FileIO();
+        //file.LearnFileReading();
+        file.LearnFileWriting();
+        //file.LearnFileInfo();//extracting meta information
+        //file.LearnDirectory();
+        file.LearnDirectoryInfo();
 
     }
 }
