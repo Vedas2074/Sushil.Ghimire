@@ -1,0 +1,15 @@
+@model Department
+@{
+    ViewData["Title"] = Model.ItemName;
+}
+<h2>@Model.ItemName Details
+    <a class="btn btn-secondary" asp-controller="department" asp-action="index">Back to HomePage</a>
+</h2>
+
+<ul class="list-group">
+    <li class="list-group-item">Item Id:@Model.ItemId</li>
+    <li class="list-group-item">Item Name:@Model.ItemName</li>
+    <li class="list-group-item">Price :@Model.Price</li>
+    <li class="list-group-item">InStock/Status:@Model.Status</li>
+    <li class="list-group-item">Quantity: @Model.Quantity</li>
+</ul>
