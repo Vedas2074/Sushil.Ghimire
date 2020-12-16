@@ -1,27 +1,32 @@
 @model Employee
+@{
+    ViewData["Title"] = "Add Employee";
+}
+<h1 class="text-center">Add Employee</h1>
+<hr>
+<form asp-controller="Employee" asp-action="Add" method="POST">
+    <div class="form-group">
+        <label asp-for="FirstName"></label><!--asp tag helper automatically render firstname-->
+        <span class="text-danger" asp-validation-for="FirstName"></span>
+        <input type="text" class="form-control" asp-for="FirstName" placeholder="Enter first name">
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <span class="text-danger" asp-validation-for="FirstName"></span>
+        <input type="text" class="form-control" asp-for="LastName" placeholder="Enter last name">
+    </div>
+    <div class="form-group">
+        <label asp-for="Address">Address:</label>
+        <input type="text" class="form-control" asp-for="Address" placeholder="Enter Address">
+    </div>
+    <div class="form-group">
+        <label asp-for="Age">Age:</label>
+        <input type="number" class="form-control" asp-for="Age" placeholder="Enter Age">
+    </div>
+    <div class="form-group">
+        <label asp-for="Salary">Salary:</label>
+        <input type="number" class="form-control" asp-for="Salary" placeholder="Enter Salary">
+    </div>
 
-<h1 class="text-center">Form FillUp</h1>
-
-<form>
-    <div class="mb-3">
-        <label for="firstname" class="form-label">First Name:</label>
-        <input type="text" class="form-control" id="firstName" aria-describedby="" placeholder="Enter F">
-    </div>
-    <div class="mb-3">
-        <label for="lastname" class="form-label">Last Name:</label>
-        <input type="text" class="form-control" id="lastName" aria-describedby="">
-    </div>
-    <div class="mb-3">
-        <label for="firstName" class="form-label">Address:</label>
-        <input type="text" class="form-control" id="firstName" aria-describedby="">
-    </div>
-    <div class="mb-3">
-        <label for="age" class="form-label">Current Age:</label>
-        <input type="text" class="form-control" id="age" aria-describedby="">
-    </div>
-    <div class="mb-3">
-        <label for="salary" class="form-label">Salary:</label>
-        <input type="text" class="form-control" id="salary" aria-describedby="">
-    </div>
     <button type="submit" class="btn btn-primary">Add Employee</button>
 </form>
