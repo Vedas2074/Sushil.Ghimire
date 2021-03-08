@@ -1,0 +1,10 @@
+<h2>This is statemanagement</h2>
+<a href="/statemanagement/second?name=sushil&age=22">Go to second page</a>
+ <!--hidden fields -->
+<form action="/statemanagement/second" method="POST">
+    <input type="hidden" name="Id" id="Id" value="101"/>
+    <input type="submit" value="Submit Form"/>
+</form>
+@ViewData["x"]<!--without using the model binding we use this fields -->
+<br>
+@ViewBag.age
